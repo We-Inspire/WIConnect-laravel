@@ -1,11 +1,13 @@
 {
     "name": "weinspire/weinspire",
     "license": "MIT",
-    "version": "dev",
     "authors": [
         {
             "name": "Christoph Burger",
             "email": "office@christophburger.eu"
         }
-    ]
+    ],
+    "autoload": {
+    	"classmap": ["src/"]
+    }
 }

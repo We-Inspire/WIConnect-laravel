@@ -1,4 +1,4 @@
-<?php namespace WeInspire\Routing\Controller\Inspector;
+<?php namespace WeInspire\Routing\Controller;
 
 class Inspector extends \Illuminate\Routing\Controllers\Inspector {
 

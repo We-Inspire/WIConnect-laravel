@@ -1,6 +1,6 @@
-<?php namespace Weinspire\Router;
+<?php namespace WeInspire\Routing;
 
-use Weinspire\Inspector\Inspector;
+use Weinspire\Routing\Controller\Inspector;
 
 class Router extends Illuminate\Routing\Router {
 

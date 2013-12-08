@@ -1,4 +1,4 @@
-<?php namespace Weinspire\Request;
+<?php namespace WeInspire\Request;
 
 class Request extends \Illuminate\Http\Request {
 

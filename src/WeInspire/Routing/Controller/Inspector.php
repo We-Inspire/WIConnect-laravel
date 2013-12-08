@@ -1,4 +1,4 @@
-<?php namespace Weinspire\Inspector;
+<?php namespace Weinspire\Routing\Controller\Inspector;
 
 class Inspector extends Illuminate\Routing\Controllers\Inspector {
 

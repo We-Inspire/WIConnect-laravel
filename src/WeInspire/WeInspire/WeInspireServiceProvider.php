@@ -1,6 +1,7 @@
 <?php namespace WeInspire\WeInspire;
 
 use Illuminate\Support\ServiceProvider;
+use WeInspire\Routing\Router;
 
 class WeInspireServiceProvider extends ServiceProvider {
 
@@ -29,6 +30,7 @@ class WeInspireServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
+		$this->app['router'] = new WeInspire\Routing\Router;
 	}
 
 	/**

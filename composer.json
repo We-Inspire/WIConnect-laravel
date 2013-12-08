@@ -1,0 +1,13 @@
+{
+    "name": "weinspire/weinspire",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christoph Burger",
+            "email": "office@christophburger.eu"
+        }
+    ],
+    "require": {
+
+    }
+}

@@ -30,7 +30,11 @@ class WeInspireServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
-		$this->app['router'] = new WeInspire\Routing\Router;
+		$this->app['router'] = $this->app->share(function($app) {
+			$router = new WeInspire\Routing\Router;
+
+			return $router;
+		});	
 	}
 
 	/**

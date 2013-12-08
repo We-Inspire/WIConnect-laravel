@@ -1,8 +1,8 @@
-<?php namespace WeInspire\Routing;
+<?php namespace WeInspire;
 
 use Illuminate\Support\ServiceProvider;
 
-class RoutingServiceProvider extends ServiceProvider {
+class WeInspireServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.

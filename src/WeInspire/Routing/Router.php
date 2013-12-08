@@ -11,7 +11,7 @@ class Router extends \Illuminate\Routing\Router {
 
 	public function getInspector()
 	{
-		return $this->inspector ?: new \Weinspire\Inspector\Inspector;
+		return $this->inspector ?: new \Weinspire\Routing\Controller\Inspector;
 	}
 
 }

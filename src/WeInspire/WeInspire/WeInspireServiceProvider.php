@@ -1,4 +1,4 @@
-<?php namespace WeInspire;
+<?php namespace WeInspire\WeInspire;
 
 use Illuminate\Support\ServiceProvider;
 

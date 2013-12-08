@@ -1,9 +1,8 @@
 <?php namespace WeInspire\Routing;
 
 use WeInspire\Routing\Controller\Inspector;
-use Illumiate\Routing\Router;
 
-class Router extends Illuminate\Routing\Router {
+class Router extends \Illuminate\Routing\Router {
 
 	public function node($pattern, $action) {
 		return "hi";

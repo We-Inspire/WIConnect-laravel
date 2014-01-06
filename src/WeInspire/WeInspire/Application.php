@@ -30,13 +30,11 @@ class Application extends \Illuminate\Foundation\Application {
 			//$this['request'] = $request;
 		}
 
-		$response = $this->dispatch($this['request']);
-
-		$this['router']->callCloseFilter($this['request'], $response);
+		$response = with($stack = $this->getStackedClient())->handle($request);
 
 		$response->send();
 
-		$this['router']->callFinishFilter($this['request'], $response);
+		$stack->terminate($request, $response);
 
 		/*$response = $this->dispatch($this['request']);
 

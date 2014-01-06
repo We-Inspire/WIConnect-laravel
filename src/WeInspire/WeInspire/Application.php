@@ -9,7 +9,7 @@ class Application extends \Illuminate\Foundation\Application {
 		$privkey = "test";
 
 		//return var_dump($this['request']->path());
-		//if(isset($url) && !empty($url) && !empty($key) && $privkey == $key) {
+		if(isset($url) && !empty($url) && !empty($key) && $privkey == $key) {
 			
 			$request = $this['request'];
 
@@ -28,7 +28,7 @@ class Application extends \Illuminate\Foundation\Application {
 			//return "-------";
 
 			//$this['request'] = $request;
-		//}
+		}
 
 		$response = with($stack = $this->getStackedClient())->handle($request);
 

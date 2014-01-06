@@ -4,6 +4,8 @@ use WeInspire\Routing\Controller\Inspector;
 
 class Router extends \Illuminate\Routing\Router {
 
+	public static $verbs = array('GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'NODE')
+
 	public function node($pattern, $action) {
 		//return "hi";
 		return $this->createRoute('node', $pattern, $action);

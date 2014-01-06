@@ -38,7 +38,11 @@ class WeInspireServiceProvider extends ServiceProvider {
 
 
 		$this->app['router'] = $this->app->share(function($app) {
-			$router = new \WeInspire\Routing\Router($app);
+			$router = new \WeInspire\Routing\Router($app['events'], $app);
+
+			if($app['env'] == 'testing') {
+				$router->disableFilters();
+			}
 
 			return $router;
 		});	

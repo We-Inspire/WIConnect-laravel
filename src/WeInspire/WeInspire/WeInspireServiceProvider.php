@@ -36,6 +36,7 @@ class WeInspireServiceProvider extends ServiceProvider {
 			return $app;
 		});*/
 
+		//CB
 
 		$this->app['router'] = $this->app->share(function($app) {
 			$router = new \WeInspire\Routing\Router($app['events'], $app);

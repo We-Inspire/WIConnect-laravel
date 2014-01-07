@@ -19,9 +19,9 @@ class Application extends \Illuminate\Foundation\Application {
 			//echo var_dump($request->getPathInfo());
 			//echo "-------";
 
-			$this['request']->setMethod("node");
-			$this['request']->setKey($key);
-			$this['request']->setPathInfo($url);
+			$request->setMethod("NODE");
+			$request->setKey($key);
+			$request->setPathInfo($url);
 
 			//echo "------";
 			//var_dump($request);

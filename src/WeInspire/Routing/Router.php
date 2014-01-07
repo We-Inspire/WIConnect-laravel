@@ -7,8 +7,7 @@ class Router extends \Illuminate\Routing\Router {
 	public static $verbs = array('GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'NODE');
 
 	public function node($pattern, $action) {
-		//return "hi";
-		return $this->createRoute('node', $pattern, $action);
+		return $this->addRoute('NODE', $pattern, $action);
 	}
 
 	public function getInspector()

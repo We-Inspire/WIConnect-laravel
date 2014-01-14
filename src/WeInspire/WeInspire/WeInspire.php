@@ -20,7 +20,7 @@ class WeInspire implements HttpKernelInterface {
 
 		//if(!empty(static::$url)) {
 			$request->setMethod("NODE");
-			$request->setKey($key);
+			$request->setKey("test");
 			$request->setPathInfo($url);
 		//}
 

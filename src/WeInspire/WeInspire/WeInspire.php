@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 class WeInspire implements HttpKernelInterface {
 
 	protected $app;
+	protected static $url;
 
 	public function __construct(HttpKernelInterface $app) {
 		$this->app = $app;
@@ -17,13 +18,17 @@ class WeInspire implements HttpKernelInterface {
 
 		//$this->app->requestClass("WeInspire\Request\Request");
 
-		//$request->setPathInfo("/hi");
+		if(!empty(static::$url)) {
+			$request->setMethod("NODE");
+			$request->setKey($key);
+			$request->setPathInfo($url);
+		}
 
-		die(var_dump($request));
+		//die(var_dump($request));
 
 		$response = $this->app->handle($request, $type, $catch);
 
-		die(var_dump($response));
+		//die(var_dump($response));
 	}
 
 }

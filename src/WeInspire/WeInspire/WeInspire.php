@@ -13,11 +13,11 @@ class WeInspire implements HttpKernelInterface {
 
 	public function handle(SymfonyRequest $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true) {
 
-		$request = \WeInspire\Request\Request::createFromGlobals();
+		$request = new \WeInspire\Request\Request(array(), $request);
 
 		//$this->app->requestClass("WeInspire\Request\Request");
 
-		$request->setPathInfo("/hi");
+		//$request->setPathInfo("/hi");
 
 		die(var_dump($request));
 

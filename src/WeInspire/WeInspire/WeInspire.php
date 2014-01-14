@@ -17,6 +17,8 @@ class WeInspire implements HttpKernelInterface {
 
 		$this->app->requestClass("WeInspire\Request\Request");
 
+		$request->setPathInfo("/hi");
+
 		die(var_dump($request));
 
 		$response = $this->app->handle($request, $type, $catch);

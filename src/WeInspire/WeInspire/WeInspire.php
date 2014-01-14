@@ -3,7 +3,7 @@
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
-class WeInspire extends HttpKernelInterface {
+class WeInspire implements HttpKernelInterface {
 
 	protected $app;
 

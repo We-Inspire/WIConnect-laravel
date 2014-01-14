@@ -13,7 +13,7 @@ class WeInspire implements HttpKernelInterface {
 
 	public function handle(SymfonyRequest $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true) {
 
-		$request = new \WeInspire\Request\Request(array(), $_GET);
+		$request = new \WeInspire\Request\Request($_GET, $_POST, array(), $_COOKIE, $_FILES, $_SERVER);
 
 		//$this->app->requestClass("WeInspire\Request\Request");
 

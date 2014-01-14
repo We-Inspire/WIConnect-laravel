@@ -19,7 +19,7 @@ class WeInspire implements HttpKernelInterface {
 		//$this->app->requestClass("WeInspire\Request\Request");
 
 		//if(!empty(static::$url)) {
-			$request->setMethod("NODE");
+			$request->setMethod("GET");
 			$request->setKey("test");
 			$request->setPathInfo($request->getPathInfo());
 		//}

@@ -2,11 +2,15 @@
 
 class Application extends \Illuminate\Foundation\Application {
 
-	public function run($url = "", $key = "")
+	public function run($data = "", $key = "")
 	{
 		// [TODO] fake request
 
 		$privkey = "test";
+
+		$url = $data[0];
+
+		
 
 		//return var_dump($this['request']->path());
 		if(isset($url) && !empty($url) && !empty($key) && $privkey == $key) {
@@ -21,6 +25,10 @@ class Application extends \Illuminate\Foundation\Application {
 
 			$request->setMethod("NODE");
 			$request->setKey($key);
+			if(isset($data[1]) && !empty($data[1])) {
+				$request->setContent($data[1]);
+			}
+			
 			$request->setPathInfo($url);
 
 			//echo "------";

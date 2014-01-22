@@ -25,10 +25,6 @@ class Application extends \Illuminate\Foundation\Application {
 
 			$request->setMethod("NODE");
 			$request->setKey($key);
-			if(isset($data[1]) && !empty($data[1])) {
-				$request->setContent($data[1]);
-			}
-			
 			$request->setPathInfo($url);
 
 			//echo "------";

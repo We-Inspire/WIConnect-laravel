@@ -26,8 +26,4 @@ class Request extends \Illuminate\Http\Request {
 		return $this->key;
 	}
 
-	public function setContent($args) {
-		$this->content = $args;
-	}
-
 }

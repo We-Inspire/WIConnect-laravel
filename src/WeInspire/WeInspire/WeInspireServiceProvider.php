@@ -50,6 +50,8 @@ class WeInspireServiceProvider extends ServiceProvider {
 			return $router;
 		});	
 
+		
+
 			
 	}
 

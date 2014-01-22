@@ -10,6 +10,7 @@ class Request extends \Illuminate\Http\Request {
 	}
 
 	public function node() {
+		
 		return $this->getMethod() == 'NODE' && $this->getKey() == "test";
 	}
 
@@ -23,6 +24,10 @@ class Request extends \Illuminate\Http\Request {
 
 	public function getKey() {
 		return $this->key;
+	}
+
+	public function setContent($asResource = false, $args) {
+		$this->content = $args;
 	}
 
 }

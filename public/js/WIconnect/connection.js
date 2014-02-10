@@ -448,13 +448,12 @@ var Connection = function(url){
 			});
 		});
 
-		if(self.listeners['connected']) {
-
+		if(self.listeners['connected']){
 			for(var i = 0; i < self.listeners['connected'].length; i++){
-			     self.listeners['connected'][i](msg);
-			}
-	     
-	    }
+	        	self.listeners['connected'][i](msg);
+	     	}
+		}
+		 
 	}
 
 	self.failed = function(data){

@@ -10,6 +10,7 @@ class Request extends \Illuminate\Http\Request {
 	}
 
 	public function node() {
+		
 		return $this->getMethod() == 'NODE' && $this->getKey() == "test";
 	}
 

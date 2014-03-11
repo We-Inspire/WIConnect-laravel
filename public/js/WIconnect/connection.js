@@ -396,6 +396,13 @@ var Connection = function(url){
 		}
 	}
 
+	/**
+	* Register a listener
+	* Possible events: broadcast or a table name
+	*
+	* @param name Event to listen on
+	* @param callback Listener, which is called, when the event is triggered
+	*/
 	self.on = function(name, cb){
 		if(!self.listeners[name]){
 			self.listeners[name] = [];
@@ -461,17 +468,28 @@ var Connection = function(url){
 		self.stream.disconnect();
 	}
 
+	/**
+		Sends javascript object to server
+		@param obj The object to send
+	*/
 	self.send = function(obj){
 		self.stream.send(DDP.stringify(obj));
 	}
 
+	/**
+		Closes the connection to the server.
+	*/
 	self.close = function(){
 		self.stream.disconnect();
 	}
 
+	/**
+		Reconnects to the server
+	*/
 	self.reconnect = function(){
 		self.stream.reconnect();
 	}
+	
 	/****************************************************************
 			Document changing functions
 	****************************************************************/
@@ -523,6 +541,13 @@ var Connection = function(url){
 	/****************************************************************
 			Document subscribe functions
 	****************************************************************/
+	
+	/**
+	 * Subscribe to a table for changes.
+	 * 
+	 * @param name table name
+	 * @return handle object, which has a stop function to stop the subscription
+	 */
 	self.subscribe = function(name){
 		var id = self.idControl.next();
 		var params = Array.prototype.slice.call(arguments,1);
@@ -553,6 +578,7 @@ var Connection = function(url){
 
 		return handle;
 	}
+
 	
 	self.nosub = function(data){
 		var id = data.id;
@@ -570,7 +596,13 @@ var Connection = function(url){
 			console.log(error.reason || 'Subscription not found');
 		}	
 	}	
-
+	
+	/**
+	 * Subscribe to a broadcast channel for changes.
+	 * 
+	 * @param channel channel name
+	 * @return handle object, which has a stop function to stop the broadcast subscription
+	 */
 	self.subscribeBroadcast = function (channel) {
 		var id = self.idControl.next();
 		var msg = {
@@ -617,6 +649,12 @@ var Connection = function(url){
 		self.notifyListeners('broadcast', data, null, data.msg);
 	}
 
+	/**
+	 * Send a broadcast to the server
+	 * 
+	 * @param channel broadcast channel
+	 * @param data data, which should be transfered to the listeners
+	 */
 	self.sendBroadcast = function(channel, data){
 		var msg = {
 			msg: 'broadcast',

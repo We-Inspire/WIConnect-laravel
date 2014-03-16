@@ -295,6 +295,12 @@ var Tracker = function(options){
 }
 
 
+/**
+ * Connection
+ * 
+ * @class Connection
+ */
+
 var Connection = function(url){
 	var self = this;
 
@@ -652,8 +658,9 @@ var Connection = function(url){
 	/**
 	 * Send a broadcast to the server
 	 * 
-	 * @param channel broadcast channel
-	 * @param data data, which should be transfered to the listeners
+	 * @method sendBroadcast
+	 * @param {String} channel broadcast channel
+	 * @param {object} data data, which should be transfered to the listeners
 	 */
 	self.sendBroadcast = function(channel, data){
 		var msg = {

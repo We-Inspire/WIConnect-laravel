@@ -1,7 +1,13 @@
 <?php namespace WeInspire\Helpers;
+
+/**
+*	@author Christoph Burger <christoph.burger@we-inspire.net>
+*/
+
 class WIHelpers {
 
-	/** Sends data to Node-Server
+	/** 
+	*	Sends data to Node-Server
 	*
 	*	@param $data 			JSON-Object with data
 	*	@return 				Returns the state of the call. Can be an self defined error-message or object
@@ -17,7 +23,8 @@ class WIHelpers {
 
 	} 
 
-	/** Parses plaintext-data to a JSON-Object
+	/** 
+	*	Parses plaintext-data to a JSON-Object
 	*
 	*	@param $model 			Laravel model
 	*	@return 				Returns an JSON-Object of $data

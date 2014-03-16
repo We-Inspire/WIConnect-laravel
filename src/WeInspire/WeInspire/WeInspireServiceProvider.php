@@ -28,15 +28,6 @@ class WeInspireServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
-
-		/*$this->app['app'] = $this->app->share(function($app) {
-			$app = new \WeInspire\Application;
-
-			return $app;
-		});*/
-
-		//CB
 
 		$this->app['router'] = $this->app->share(function($app) {
 			$router = new \WeInspire\Routing\Router($app['events'], $app);

@@ -1,12 +1,22 @@
 {
-    "name": "weinspire/weinspire",
+    "name": "We-Inspire/WIConnect-laravel",
+    "description": "WIConnect Laravel-Package",
     "license": "MIT",
     "authors": [
         {
             "name": "Christoph Burger",
-            "email": "office@christophburger.eu"
+            "email": "office@christophburger.eu",
+            "homepage": "christophburger.eu"
+        },
+        {
+            "name": "Markus Nissl",
+            "email": "markus@markusnissl.com",
+            "homepage": "markusnissl.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/We-Inspire/WIConnect-laravel/issues" 
+    },
     "autoload": {
     	"classmap": ["src/"]
     }

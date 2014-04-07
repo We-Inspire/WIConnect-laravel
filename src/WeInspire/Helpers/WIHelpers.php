@@ -7,12 +7,11 @@
 class WIHelpers {
 
 	/** 
-	*	Sends data to Node-Server
-	*
-	*	@param $data 			JSON-Object with data
-	*	@return 				Returns the state of the call. Can be an self defined error-message or object
-	*/
-	
+	 * Sends data to Node-Server
+	 *
+	 * @param $data JSON-Object with data
+	 * @return Returns the state of the call. Can be an self defined error-message or object
+	 */
 	public static function sendToNode($data, $remoteFunction) {
 		$dnode = new \DnodeSyncClient\DnodeSync();
 		$connection = $dnode->connect("localhost", 5004);	
@@ -24,12 +23,11 @@ class WIHelpers {
 	} 
 
 	/** 
-	*	Parses plaintext-data to a JSON-Object
-	*
-	*	@param $model 			Laravel model
-	*	@return 				Returns an JSON-Object of $data
-	*/
-
+	 * Parses plaintext-data to a JSON-Object
+	 *
+	 * @param $model Laravel model
+	 * @return Returns an JSON-Object of $data
+	 */
 	public static function toJSON($data) {
 
 		return json_encode($data);

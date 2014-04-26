@@ -1,7 +1,7 @@
-# Welcome to WIConnect for laravel!
+# Welcome to WIConnect for Laravel!
 
 ## Introduction
-WIConnect is a product of three students, who are very interested in technologies for web-development. This project is an interface for laravel to send data to a node.js server.
+WIConnect is a product of three students, who are very interested in web-technologies. This project is an interface for Laravel to send data to a Node.JS server.
 
 ## Installation
 
@@ -11,8 +11,8 @@ WIConnect is a product of three students, who are very interested in technologie
 	- add ``` "we-inspire/wiconnect": "4.0.*" ``` to your composer.json of your laravel project
 - run ``` composer install ``` or ``` composer update ```
 - add Service Provider ``` 'WeInspire\WeInspire\WeInspireServiceProvider' ``` to your conf/app.php
-- copy vendor/we-inspire/wiconnect/assets/start.weinspire.php to /path/to/laravel/app/bootstrap/
-- copy vendor/we-inspire/wiconnect/assets/index.server.php to /path/to/laravel/public/
+- copy ```vendor/we-inspire/wiconnect/assets/start.weinspire.php``` to ```/path/to/laravel/app/bootstrap/```
+- copy ```vendor/we-inspire/wiconnect/assets/index.server.php``` to ```/path/to/laravel/public/```
 
 ## Usage
 
@@ -34,7 +34,7 @@ WIHelpers::sendToNode($data, $functionname);
 You can explore the documentation and API [here](http://www.we-inspire.net).
 
 ## Development
-This project is currently under development. If you want to improve this project, please feel free to fork or send pull requests.
+This project is currently under development. If you want to improve this project, please feel free to contact us, fork or send pull requests.
 
 ## Issues
 Please provide us information about issues you find.
